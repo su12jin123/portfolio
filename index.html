@@ -4,15 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sujin's portfolio</title>
+
     <link rel="stylesheet" href="lib/dist/fullpage.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/sujin_portfolio.css" />
+
+    <link rel="shortcut icon" href="img/파비콘/android-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
     <script src="lib/jquery-3.7.0.min.js"></script>
-    <script src="lib/dist/fullpage.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
 
     <script>
       $(function () {
@@ -45,15 +68,14 @@
           anchors: ["sec1", "sec2", "sec3"],
         });
 
-
         var swiper = new Swiper(".mySwiper", {
           slidesPerView: 1,
           spaceBetween: 40,
           centeredSlides: true,
-           autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -88,26 +110,43 @@
         });
 
         $(".adver .inner .item").click(function () {
-            $(".section .content").addClass("on")
-            $(".section .content .inner .poster .item").removeClass("on")
+          $(".section .content").addClass("on");
+          $(".section .content .inner .poster .item").removeClass("on");
           $(".section .content .inner > .item").removeClass("on");
-          $(".section .content .inner > .item").eq($(this).index()).addClass("on");
+          $(".section .content .inner > .item")
+            .eq($(this).index())
+            .addClass("on");
         });
 
-     $(".section .content").click(function(){
-        $(".section .content.on").removeClass("on")
-     })
+        $(".section .content").click(function () {
+          $(".section .content.on").removeClass("on");
+        });
 
-
-     $(".edit .inner .item").click(function(){
-        $(".section .content").addClass("on")
-        $(".section .content .inner > .item").removeClass("on")
+        $(".edit .inner .item").click(function () {
+          $(".section .content").addClass("on");
+          $(".section .content .inner > .item").removeClass("on");
           $(".section .content .inner .poster .item").removeClass("on");
-          $(".section .content .inner .poster .item").eq($(this).index()).addClass("on");
-     })
+          $(".section .content .inner .poster .item")
+            .eq($(this).index())
+            .addClass("on");
+        });
 
+        $(window).scroll(function () {
+          let height = $(window).scrollTop();
+          let item1Top = $(".project .inner .item1").offset().top;
+          let item2Top = $(".project .inner .item2").offset().top;
+          console.log(height);
+          console.log(item1Top);
+          console.log(item2Top);
+
+
+
+
+        });
       });
     </script>
+
+
   </head>
 
   <body>
@@ -317,19 +356,28 @@
               <!-- item end -->
               <div class="item">
                 <figure>
-                  <img src="img/sns디자인 (Dining Room)_포폴.jpg" alt="디자인작품" />
+                  <img
+                    src="img/sns디자인 (Dining Room)_포폴.jpg"
+                    alt="디자인작품"
+                  />
                 </figure>
               </div>
               <!-- item end -->
               <div class="item">
                 <figure>
-                  <img src="img/포스터(바이컬러가글)_포폴용.jpg" alt="디자인작품" />
+                  <img
+                    src="img/포스터(바이컬러가글)_포폴용.jpg"
+                    alt="디자인작품"
+                  />
                 </figure>
               </div>
               <!-- item end -->
               <div class="item">
                 <figure>
-                  <img src="img/상품 소개페이지_ 코오롱 스포츠.png" alt="디자인작품" />
+                  <img
+                    src="img/상품 소개페이지_ 코오롱 스포츠.png"
+                    alt="디자인작품"
+                  />
                 </figure>
               </div>
               <!-- item end -->
@@ -343,35 +391,41 @@
                 <figure>
                   <img src="img/위드굿즈배너.jpg" alt="디자인작품" />
                 </figure>
-              </div> <!-- item end -->
-
+              </div>
+              <!-- item end -->
 
               <div class="poster">
-              <div class="item">
-                <figure>
-                  <img src="img/sofa.jpg" alt="디자인작품" />
-                </figure>
-              </div> <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/sofa.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
 
-              <div class="item">
-                <figure>
-                  <img src="img/쿠킹클래스1.jpg" alt="디자인작품" />
-                </figure>
-              </div> <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/쿠킹클래스1.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
 
-              <div class="item">
-                <figure>
-                  <img src="img/향수.jpg" alt="디자인작품" />
-                </figure>
-              </div> <!-- item end -->
-            
-              <div class="item">
-                <figure>
-                  <img src="img/시로만든집.jpg" alt="디자인작품" />
-                </figure>
-              </div> <!-- item end -->
-            </div><!-- poster end -->
-            </div><!-- inner end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/향수.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+
+                <div class="item">
+                  <figure>
+                    <img src="img/시로만든집.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- poster end -->
+            </div>
+            <!-- inner end -->
           </div>
           <!-- content -->
 
@@ -382,7 +436,7 @@
               </div>
               <!-- title end -->
 
-              <div class="item">
+              <div class="item item1">
                 <div class="left">
                   <div class="num">
                     <h3>01</h3>
@@ -420,7 +474,9 @@
                     <a href="img/현대식품관시안.jpg" target="_blank"
                       >프로토타입 보기</a
                     >
-                    <a href="file/현대식품관기획서.jpg" target="_blank">기획서 보기</a>
+                    <a href="file/현대식품관기획서.jpg" target="_blank"
+                      >기획서 보기</a
+                    >
                     <a
                       href="https://su12jin123.github.io/project09"
                       target="_blank"
@@ -434,7 +490,7 @@
               </div>
               <!-- item end -->
 
-              <div class="item">
+              <div class="item item2">
                 <div class="left">
                   <div class="num">
                     <h3>02</h3>
@@ -900,7 +956,10 @@
                 <!-- item end -->
                 <div class="item">
                   <figure>
-                    <img src="img/sns디자인 (Dining Room)_포폴.jpg" alt="디자인작품" />
+                    <img
+                      src="img/sns디자인 (Dining Room)_포폴.jpg"
+                      alt="디자인작품"
+                    />
                   </figure>
                   <div class="text">
                     <p>장인가구 다이닝룸 SNS 디자인</p>
@@ -912,7 +971,10 @@
                 <!-- item end -->
                 <div class="item">
                   <figure>
-                    <img src="img/포스터(바이컬러가글)_포폴용.jpg" alt="디자인작품" />
+                    <img
+                      src="img/포스터(바이컬러가글)_포폴용.jpg"
+                      alt="디자인작품"
+                    />
                   </figure>
                   <div class="text">
                     <p>바이컬러 가글 SNS 디자인</p>
@@ -924,7 +986,10 @@
                 <!-- item end -->
                 <div class="item">
                   <figure>
-                    <img src="img/상품 소개페이지_ 코오롱 스포츠.png" alt="디자인작품" />
+                    <img
+                      src="img/상품 소개페이지_ 코오롱 스포츠.png"
+                      alt="디자인작품"
+                    />
                   </figure>
                   <div class="text">
                     <p>코오롱 스포츠 상세페이지 디자인</p>
@@ -1032,10 +1097,9 @@
           </div>
           <!-- edit end -->
 
-
           <a href="#project01" class="top">
-            <p>Top</p>
-          </a><!-- top end -->
+            <p>Top</p> </a
+          ><!-- top end -->
 
           <footer>
             <p><span>미완성,</span>&nbsp; 이 곳에서 완성해 나가겠습니다.</p>
