@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sujin's portfolio</title>
+    <link rel="stylesheet" href="lib/dist/fullpage.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/sujin_portfolio.css" />
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      $(function () {
+        $(".intro .inner .right .intro_item02 .in div").mouseenter(function () {
+          $(".intro .inner .right .intro_item02 .in div").css({
+            "background-color": "#D9D9D9",
+          });
+          $(this).css({
+            "background-color": "#406126",
+          });
+          $(this).addClass("on");
+        });
+        $(".intro .inner .right .intro_item02 .in_list .in").mouseenter(
+          function () {
+            $(".intro .inner .right .intro_item02 .text").removeClass("on");
+            $(".intro .inner .right .intro_item02 .text")
+              .eq($(this).index())
+              .addClass("on");
+          }
+        );
+
+        var myFullpage = new fullpage("#fullpage", {
+          slidesNavigation: true,
+          responsiveWidth: 1024,
+          autoScrolling: true,
+          showActiveTooltip: true,
+          navigationTooltips: ["SHINSUJIN", "ABOUTME", "PROJECT"],
+          navigationPosition: "right",
+          navigation: true,
+          anchors: ["sec1", "sec2", "sec3"],
+        });
+
+
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 40,
+          centeredSlides: true,
+           autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3.7,
+              spaceBetween: 50,
+            },
+          },
+        });
+        $(".adver .inner .item").mouseenter(function () {
+          $(".adver .inner .item").removeClass("on");
+          $(this).addClass("on");
+        });
+
+        $(".adver .inner .item").mouseleave(function () {
+          $(".adver .inner .item").removeClass("on");
+        });
+
+        $(".adver .inner .item").click(function () {
+            $(".section .content").addClass("on")
+            $(".section .content .inner .poster .item").removeClass("on")
+          $(".section .content .inner > .item").removeClass("on");
+          $(".section .content .inner > .item").eq($(this).index()).addClass("on");
+        });
+
+     $(".section .content").click(function(){
+        $(".section .content.on").removeClass("on")
+     })
+
+
+     $(".edit .inner .item").click(function(){
+        $(".section .content").addClass("on")
+        $(".section .content .inner > .item").removeClass("on")
+          $(".section .content .inner .poster .item").removeClass("on");
+          $(".section .content .inner .poster .item").eq($(this).index()).addClass("on");
+     })
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!-- <div class="top">
+            <p>Top</p>
+        </div> -->
+      <div id="fullpage">
+        <div class="section" ata-anchor="sec1">
+          <div class="main">
+            <div class="title">
+              <h1>美完成</h1>
+              <p>[미; 완성]</p>
+              <span>함께 완성해 나가겠습니다.</span>
+            </div>
+            <!-- title end -->
+
+            <div class="right_title">
+              <h5>아름다울<span>美</span></h5>
+              <h5>완전할<span>완</span></h5>
+              <h5>이룰<span>성</span></h5>
+              <div class="title_bottom">
+                <span>포</span>
+                <span>트</span>
+                <span>폴</span>
+                <span>리</span>
+                <span>오</span>
+              </div>
+              <!-- title_bottom end -->
+            </div>
+            <!-- right_title end -->
+          </div>
+          <!-- main end -->
+        </div>
+        <!-- sec end -->
+
+        <div class="section" ata-anchor="sec2">
+          <div class="intro">
+            <div class="inner">
+              <div class="left">
+                <div class="img">
+                  <figure>
+                    <img src="img/신수진-흰색-34-.jpg" alt="증명사진" />
+                  </figure>
+                  <div class="resume">
+                    <a href="file/신수진_입사지원서.pdf" target="_blank"
+                      >Resume</a
+                    >
+                  </div>
+                  <!-- resume end -->
+                </div>
+                <!-- img end -->
+              </div>
+              <!-- left end -->
+
+              <div class="right">
+                <div class="center_title">
+                  <h3>계발, 그리고 개발</h3>
+                  <h3>안녕하십니까, 내일을 준비하는 신수진입니다.</h3>
+                </div>
+                <!-- center_title end -->
+                <div class="intro_list">
+                  <div class="into_item01">
+                    <div class="about">
+                      <h4>About me</h4>
+                      <div class="in">
+                        <p class="birth">Birth</p>
+                        <p>1998. 7. 9</p>
+                      </div>
+                      <!-- in end -->
+                      <div class="in">
+                        <p>Phone</p>
+                        <p>010.4196.1821</p>
+                      </div>
+                      <!-- in end -->
+                      <div class="in">
+                        <p>E-mail</p>
+                        <p>tk18211@naver.com</p>
+                      </div>
+                      <!-- in end -->
+                    </div>
+                    <!-- about end -->
+
+                    <div class="edu">
+                      <h4>Education</h4>
+                      <p>UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료</p>
+                      <p>동의대학교 중국어학과 졸업</p>
+                    </div>
+                    <!-- edu end -->
+                  </div>
+                  <!-- center end -->
+
+                  <div class="intro_item02">
+                    <div class="title">
+                      <h4>Skills</h4>
+                      <span>그래프에 마우스를 올려보세요!</span>
+                    </div>
+                    <!-- title end -->
+                    <div class="in_list">
+                      <div class="in">
+                        <p>Photoshop</p>
+                        <div class="photo on"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>Illustrator</p>
+                        <div class="ill"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>Figma</p>
+                        <div class="figma"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>Html</p>
+                        <div class="html"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>Css</p>
+                        <div class="css"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>Jquery</p>
+                        <div class="jquery"><span></span></div>
+                      </div>
+                      <div class="in">
+                        <p>중국어</p>
+                        <div class="chinese"><span></span></div>
+                      </div>
+                    </div>
+                    <!-- in_list end -->
+
+                    <div class="text on">
+                      <p>
+                        원하는 이미지 편집, 제작 및 합성을 할 수 있으며,
+                        그리드를 이용하여 균형감 있는
+                        <span>웹사이트 시안을 제작</span>할 수 있습니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>
+                        펜툴을 이용하여 <span>심벌디자인 및 도안 작업</span>,
+                        인쇄용 포스터 디자인이 가능합니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>
+                        다양한 디바이스 환경에 맞춘
+                        <span>UI/UX 디자인 및 프로토타입 제작</span>이
+                        가능합니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>
+                        웹, 태블릿, 모바일 등
+                        <span>다양한 디바이스 환경을 고려한 코드를 작성</span>할
+                        수 있습니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>
+                        HTML을 이용하여 마크업한 문서의
+                        <span>레이아웃과 스타일 정의</span>를 할 수 있습니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>
+                        플러그인을 적용하여
+                        <span>다양한 동적 효과를 구현</span>할 수 있습니다.
+                      </p>
+                    </div>
+                    <!-- text end -->
+
+                    <div class="text">
+                      <p>개인적 및 <span>비즈니스 회화</span>가 가능합니다.</p>
+                    </div>
+                    <!-- text end -->
+                  </div>
+                  <!-- intro_item02 end -->
+                </div>
+                <!-- intro_list end end -->
+              </div>
+              <!-- right end -->
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- intro end -->
+        </div>
+        <!-- section end -->
+
+        <div style="position: relative" class="section" ata-anchor="sec3">
+          <div class="content">
+            <div class="inner">
+              <div class="item">
+                <figure>
+                  <img src="img/마켓컬리_일러.png" alt="디자인작품" />
+                </figure>
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <figure>
+                  <img src="img/sns디자인 (Dining Room)_포폴.jpg" alt="디자인작품" />
+                </figure>
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <figure>
+                  <img src="img/포스터(바이컬러가글)_포폴용.jpg" alt="디자인작품" />
+                </figure>
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <figure>
+                  <img src="img/상품 소개페이지_ 코오롱 스포츠.png" alt="디자인작품" />
+                </figure>
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <figure>
+                  <img src="img/세레스홈상세페이지.png" alt="디자인작품" />
+                </figure>
+              </div>
+              <!-- item end -->
+              <div class="item">
+                <figure>
+                  <img src="img/위드굿즈배너.jpg" alt="디자인작품" />
+                </figure>
+              </div> <!-- item end -->
+
+
+              <div class="poster">
+              <div class="item">
+                <figure>
+                  <img src="img/sofa.jpg" alt="디자인작품" />
+                </figure>
+              </div> <!-- item end -->
+
+              <div class="item">
+                <figure>
+                  <img src="img/쿠킹클래스1.jpg" alt="디자인작품" />
+                </figure>
+              </div> <!-- item end -->
+
+              <div class="item">
+                <figure>
+                  <img src="img/향수.jpg" alt="디자인작품" />
+                </figure>
+              </div> <!-- item end -->
+            
+              <div class="item">
+                <figure>
+                  <img src="img/시로만든집.jpg" alt="디자인작품" />
+                </figure>
+              </div> <!-- item end -->
+            </div><!-- poster end -->
+            </div><!-- inner end -->
+          </div>
+          <!-- content -->
+
+          <div id="project01" class="project">
+            <div class="inner">
+              <div class="title">
+                <h1>PROJECT</h1>
+              </div>
+              <!-- title end -->
+
+              <div class="item">
+                <div class="left">
+                  <div class="num">
+                    <h3>01</h3>
+                    <h3>현대식품관 홈페이지</h3>
+                    <h3>반응형 리뉴얼</h3>
+                  </div>
+                  <!-- num end -->
+                  <span>차별화된 그로서리 마켓, 현대백화점 식품관</span>
+                  <div class="program">
+                    <div class="pro_left">
+                      <p>기여도</p>
+                      <p>프로그램</p>
+                      <p>제작기간</p>
+                    </div>
+                    <!-- left end -->
+                    <div class="pro_right">
+                      <span>100% (개인작업)</span>
+                      <span>html, css, jquery, Ps</span>
+                      <span>2주</span>
+                    </div>
+                    <!-- right end -->
+                  </div>
+                  <!-- program end -->
+                </div>
+                <!-- left end -->
+
+                <div class="right">
+                  <div class="img">
+                    <figure>
+                      <img src="img/현대식품관.png" alt="현대식품관목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="btn btn1">
+                    <a href="img/현대식품관시안.jpg" target="_blank"
+                      >프로토타입 보기</a
+                    >
+                    <a href="file/현대식품관기획서.jpg" target="_blank">기획서 보기</a>
+                    <a
+                      href="https://su12jin123.github.io/project09"
+                      target="_blank"
+                      class="on"
+                      >프로젝트 결과 보기</a
+                    >
+                  </div>
+                  <!-- btn end -->
+                </div>
+                <!-- right end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <div class="left">
+                  <div class="num">
+                    <h3>02</h3>
+                    <h3>H&M 홈페이지</h3>
+                    <h3>리뉴얼</h3>
+                  </div>
+                  <!-- num end -->
+                  <span>합리적인 가격의 세계적인 SPA 브랜드</span>
+                  <div class="program">
+                    <div class="pro_left">
+                      <p>기여도</p>
+                      <p>프로그램</p>
+                      <p>제작기간</p>
+                    </div>
+                    <!-- left end -->
+                    <div class="pro_right">
+                      <span>100% (개인작업)</span>
+                      <span>html, css, jquery, Ps</span>
+                      <span>1주</span>
+                    </div>
+                    <!-- right end -->
+                  </div>
+                  <!-- program end -->
+                </div>
+                <!-- left end -->
+
+                <div class="right">
+                  <div class="img">
+                    <figure>
+                      <img src="img/hnm.png" alt="hnm목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="btn btn4">
+                    <a href="img/h&m.jpg" target="_blank">프로토타입 보기</a>
+                    <a href="file/h&m기획서.pdf" target="_blank">기획서 보기</a>
+                    <a
+                      href="https://su12jin123.github.io/project05"
+                      target="_blank"
+                      class="on"
+                      >프로젝트 결과 보기</a
+                    >
+                  </div>
+                  <!-- btn end -->
+                </div>
+                <!-- right end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <div class="left">
+                  <div class="num">
+                    <h3>03</h3>
+                    <h3>한양대학교병원 홈페이지</h3>
+                    <h3>반응형 리뉴얼</h3>
+                  </div>
+                  <!-- num end -->
+                  <span>아시아 의료허브를 지향하는 최첨단 대학병원</span>
+                  <div class="program">
+                    <div class="pro_left">
+                      <p>기여도</p>
+                      <p>프로그램</p>
+                      <p>제작기간</p>
+                    </div>
+                    <!-- left end -->
+                    <div class="pro_right">
+                      <span>100% (개인작업)</span>
+                      <span>html, css, jquery, Ps</span>
+                      <span>1주</span>
+                    </div>
+                    <!-- right end -->
+                  </div>
+                  <!-- program end -->
+                </div>
+                <!-- left end -->
+
+                <div class="right">
+                  <div class="img">
+                    <figure>
+                      <img src="img/한양대병원.png" alt="한양대병원목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="btn btn5">
+                    <a href="img/한양대학교병원시안.jpg" target="_blank"
+                      >프로토타입 보기</a
+                    >
+                    <a
+                      href="https://su12jin123.github.io/project06"
+                      target="_blank"
+                      class="on"
+                      >프로젝트 결과 보기</a
+                    >
+                  </div>
+                  <!-- btn end -->
+                </div>
+                <!-- right end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <div class="left">
+                  <div class="num">
+                    <h3>04</h3>
+                    <h3>마녀공장 홈페이지</h3>
+                    <h3>반응형 리뉴얼</h3>
+                  </div>
+                  <!-- num end -->
+                  <span>건강한 아름다움을 추구하는 코스메틱 브랜드</span>
+                  <div class="program">
+                    <div class="pro_left">
+                      <p>기여도</p>
+                      <p>프로그램</p>
+                      <p>제작기간</p>
+                    </div>
+                    <!-- left end -->
+                    <div class="pro_right">
+                      <span>100% (개인작업)</span>
+                      <span>html, css, jquery</span>
+                      <span>5일</span>
+                    </div>
+                    <!-- right end -->
+                  </div>
+                  <!-- program end -->
+                </div>
+                <!-- left end -->
+
+                <div class="right">
+                  <div class="img">
+                    <figure>
+                      <img src="img/마녀공장.png" alt="마녀공장목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="btn btn3">
+                    <a
+                      href="https://su12jin123.github.io/project07"
+                      target="_blank"
+                      class="on"
+                      >프로젝트 결과 보기</a
+                    >
+                  </div>
+                  <!-- btn end -->
+                </div>
+                <!-- right end -->
+              </div>
+              <!-- item end -->
+
+              <div class="item">
+                <div class="left">
+                  <div class="num">
+                    <h3>05</h3>
+                    <h3>스미스티 홈페이지</h3>
+                    <h3>반응형 리뉴얼</h3>
+                  </div>
+                  <!-- num end -->
+                  <span>그 어디에서도 경험하지 못한 차, 스미스티</span>
+                  <div class="program">
+                    <div class="pro_left">
+                      <p>기여도</p>
+                      <p>프로그램</p>
+                      <p>제작기간</p>
+                    </div>
+                    <!-- left end -->
+                    <div class="pro_right">
+                      <span>100% (개인작업)</span>
+                      <span>html, css, jquery</span>
+                      <span>5일</span>
+                    </div>
+                    <!-- right end -->
+                  </div>
+                  <!-- program end -->
+                </div>
+                <!-- left end -->
+
+                <div class="right">
+                  <div class="img">
+                    <figure>
+                      <img src="img/스미스티 copy.png" alt="스미스티목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="btn btn2">
+                    <a
+                      href="https://su12jin123.github.io/project08"
+                      target="_blank"
+                      class="on"
+                      >프로젝트 결과 보기</a
+                    >
+                  </div>
+                  <!-- btn end -->
+                </div>
+                <!-- right end -->
+              </div>
+              <!-- item end -->
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- project end -->
+
+          <div class="other" ata-anchor="sec">
+            <div class="title">
+              <h1>OTHER</h1>
+            </div>
+            <!-- title end -->
+
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper item_list">
+                <div class="swiper-slide item">
+                  <div class="img">
+                    <figure>
+                      <img src="img/부산관광리액트.png" alt="부산관광목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="text">
+                    <h3>부산관광 React활용 웹애플리케이션 UI개발</h3>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>기여도</p>
+                        <p>프로그램</p>
+                        <p>제작기간</p>
+                      </div>
+                      <!-- left end -->
+                      <div class="right">
+                        <span>100% (개인작업)</span>
+                        <span>React</span>
+                        <span>2일</span>
+                      </div>
+                      <!-- right end -->
+                    </div>
+                    <!-- text_list end -->
+                  </div>
+                  <!-- text end -->
+
+                  <div class="btn01">
+                    <p>
+                      <a href="file/git.pdf" target="_blank">기획서 보기</a>
+                    </p>
+                    <p>
+                      <a
+                        href="https://polite-centaur-f090da.netlify.app/"
+                        target="_blank"
+                        >프로젝트 결과 보기</a
+                      >
+                    </p>
+                  </div>
+                  <!-- btn01 end -->
+                </div>
+                <!-- item emd -->
+
+                <div class="swiper-slide item item_sec">
+                  <div class="img">
+                    <figure>
+                      <img src="img/차차.png" alt="차차목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="text">
+                    <h3>제로웨이스트차차 홈페이지 리뉴얼</h3>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>기여도</p>
+                        <p>프로그램</p>
+                        <p>제작기간</p>
+                      </div>
+                      <!-- left end -->
+                      <div class="right">
+                        <span>100% (개인작업)</span>
+                        <span>html, css, jquery, Figma</span>
+                        <span>1주</span>
+                      </div>
+                      <!-- right end -->
+                    </div>
+                    <!-- text_list end -->
+                  </div>
+                  <!-- text end -->
+                  <div class="btn01">
+                    <p>
+                      <a
+                        href="https://www.figma.com/file/nGYmSKcShhczQ7QQohJLzr/%EC%A0%9C%EB%A1%9C%EC%9B%A8%EC%9D%B4%EC%8A%A4%ED%8A%B8%EC%B0%A8%EC%B0%A8?type=design&node-id=0-1&mode=design&t=YFlTzvwFLdERjDI4-0"
+                        target="_blank"
+                        >프로토타입 보기</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        href="https://su12jin123.github.io/project02/"
+                        target="_blank"
+                        >프로젝트 결과 보기</a
+                      >
+                    </p>
+                  </div>
+                  <!-- btn01 end -->
+                </div>
+                <!-- item emd -->
+
+                <div class="swiper-slide item">
+                  <div class="img">
+                    <figure>
+                      <img src="img/비에메종.png" alt="비에메종목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="text">
+                    <h3>비에메종 홈페이지 리뉴얼</h3>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>기여도</p>
+                        <p>프로그램</p>
+                        <p>제작기간</p>
+                      </div>
+                      <!-- left end -->
+                      <div class="right">
+                        <span>100% (개인작업)</span>
+                        <span>html, css, jquery</span>
+                        <span>1주</span>
+                      </div>
+                      <!-- right end -->
+                    </div>
+                    <!-- text_list end -->
+                  </div>
+                  <!-- text end -->
+                  <div class="btn01">
+                    <p>
+                      <a
+                        href="https://su12jin123.github.io/project04/"
+                        target="_blank"
+                      >
+                        프로젝트 결과 보기
+                      </a>
+                    </p>
+                  </div>
+                  <!-- btn01 end -->
+                </div>
+                <!-- item emd -->
+
+                <div class="swiper-slide item">
+                  <div class="img">
+                    <figure>
+                      <img src="img/위드굿즈.png" alt="위드굿즈목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="text">
+                    <h3>위드굿즈 홈페이지 리뉴얼</h3>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>기여도</p>
+                        <p>프로그램</p>
+                        <p>제작기간</p>
+                      </div>
+                      <!-- left end -->
+                      <div class="right">
+                        <span>100% (개인작업)</span>
+                        <span>html, css, jquery, Ps</span>
+                        <span>1주</span>
+                      </div>
+                      <!-- right end -->
+                    </div>
+                    <!-- text_list end -->
+                  </div>
+                  <!-- text end -->
+                  <div class="btn01">
+                    <p>
+                      <a href="img/위드굿즈시안.jpg" target="_blank"
+                        >프로토타입 보기</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        href="https://su12jin123.github.io/project03"
+                        target="_blank"
+                      >
+                        프로젝트 결과 보기
+                      </a>
+                    </p>
+                  </div>
+                  <!-- btn01 end -->
+                </div>
+                <!-- item emd -->
+
+                <div class="swiper-slide item">
+                  <div class="img">
+                    <figure>
+                      <img src="img/마이다스.png" alt="마이다스목업" />
+                    </figure>
+                  </div>
+                  <!-- img end -->
+                  <div class="text">
+                    <h3>마이다스 호텔 홈페이지 리뉴얼</h3>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>기여도</p>
+                        <p>프로그램</p>
+                        <p>제작기간</p>
+                      </div>
+                      <!-- left end -->
+                      <div class="right">
+                        <span>100% (개인작업)</span>
+                        <span>html, css, jquery, Figma</span>
+                        <span>10일</span>
+                      </div>
+                      <!-- right end -->
+                    </div>
+                    <!-- text_list end -->
+                  </div>
+                  <!-- text end -->
+                  <div class="btn01">
+                    <div>
+                      <p>
+                        <a
+                          href="https://www.figma.com/file/D056DQo59uTl4OdnjsSEbS/%EB%A7%88%EC%9D%B4%EB%8B%A4%EC%8A%A4?type=design&node-id=0-1&mode=design&t=KrKeTQyqieghlVtj-0"
+                          target="_blank"
+                          >프로토타입 보기</a
+                        >
+                      </p>
+                      <p>
+                        <a href="file/마이다스기획서.pdf" target="_blank"
+                          >기획서 보기</a
+                        >
+                      </p>
+                    </div>
+                    <p>
+                      <a
+                        href="https://su12jin123.github.io/project01"
+                        target="_blank"
+                      >
+                        프로젝트 결과 보기
+                      </a>
+                    </p>
+                  </div>
+                  <!-- btn01 end -->
+                </div>
+                <!-- item emd -->
+              </div>
+              <!--  <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- other end -->
+
+          <div class="adver">
+            <div class="inner">
+              <div class="title">
+                <h1>ADVERTISING DESIGN</h1>
+                <p>SNS DESIGN / DETAIL DESIGN / BANNER DESIGN</p>
+              </div>
+
+              <div class="item_list">
+                <div class="item">
+                  <figure>
+                    <img src="img/마켓컬리_일러.png" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>마켓컬리 추석 프로모션 SNS 디자인</p>
+                    <span>프로그램 : Ai, Ps</span>
+                    <span>제작기간 : 3시간</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/sns디자인 (Dining Room)_포폴.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>장인가구 다이닝룸 SNS 디자인</p>
+                    <span>프로그램 : Figma</span>
+                    <span>제작기간 : 1시간</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/포스터(바이컬러가글)_포폴용.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>바이컬러 가글 SNS 디자인</p>
+                    <span>프로그램 : Figma</span>
+                    <span>제작기간 : 1시간</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/상품 소개페이지_ 코오롱 스포츠.png" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>코오롱 스포츠 상세페이지 디자인</p>
+                    <span>프로그램 : Ps</span>
+                    <span>제작기간 : 1시간</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/세레스홈상세페이지1.png" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>세레스홈 상세페이지 디자인</p>
+                    <span>프로그램 : Figma, Ps</span>
+                    <span>제작기간 : 3일</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/위드굿즈배너.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <p>위드굿즈 배너 디자인</p>
+                    <span>프로그램 : Ps</span>
+                    <span>제작기간 : 1시간</span>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- item_list end -->
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- adver end -->
+
+          <div class="edit">
+            <div class="inner">
+              <div class="title">
+                <h1>EDIT DESIGN</h1>
+                <p>POSTER DESIGN / BOOKCOVER</p>
+              </div>
+              <!-- title end -->
+              <div class="item_list">
+                <div class="item">
+                  <figure>
+                    <img src="img/Poster_sofa2.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>STAY AT HOME</h4>
+                    <p><span>MEDIA</span>POSTER</p>
+                    <p><span>DATA</span> 2023/ 09</p>
+                    <p><span>PROGRAM</span>Ps</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/poster_cooking2.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>시니어 쿠킹클래스</h4>
+                    <p><span>MEDIA</span>POSTER</p>
+                    <p><span>DATA</span> 2023/ 09</p>
+                    <p><span>PROGRAM</span>Ps, Ai</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/poster_향수2.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>CONTENT DECODED</h4>
+                    <p><span>MEDIA</span>POSTER</p>
+                    <p><span>DATA</span> 2023/ 09</p>
+                    <p><span>PROGRAM</span>Ps</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/bookcover2.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>시로 만든 집 14채</h4>
+                    <p><span>MEDIA</span>BOOKCOVER</p>
+                    <p><span>DATA</span> 2023/ 09</p>
+                    <p><span>PROGRAM</span>Ps, Ai</p>
+                  </div>
+                  <!-- text end -->
+                </div>
+                <!-- item end -->
+              </div>
+              <!-- item_list end -->
+            </div>
+            <!-- inner end -->
+          </div>
+          <!-- edit end -->
+
+
+          <a href="#project01" class="top">
+            <p>Top</p>
+          </a><!-- top end -->
+
+          <footer>
+            <p><span>미완성,</span>&nbsp; 이 곳에서 완성해 나가겠습니다.</p>
+          </footer>
+        </div>
+        <!-- sectiond end -->
+      </div>
+      <!-- fullpage end -->
+    </div>
+    <!-- wrap end -->
+  </body>
+</html>

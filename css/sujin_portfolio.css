@@ -1,0 +1,771 @@
+@charset "utf-8";
+@import url(reset.css);
+
+@font-face {
+  font-family: "ChosunSm";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* font-family: 'Pretendard'; */
+/* font-family: 'ChosunSm'; */
+
+body {
+  font-family: "Pretendard";
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.top {
+  width: 80px;
+  height: 80px;
+  background-color: #406126;
+  color: white;
+  position: sticky;
+  bottom: 15%;
+  left: 94.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ z-index: 9;
+}
+
+.top p {
+  font-size: 20px;
+}
+
+.section {
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.main .title {
+  width: 1026px;
+  margin: 360px 366px;
+}
+
+.title h1 {
+  font-size: 100px;
+  font-family: "ChosunSm";
+  font-weight: normal;
+}
+
+.title p {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 10px 0 25px;
+}
+
+.title span {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.right_title {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+  margin: 30px 25px 0 0;
+}
+
+.right_title h5 {
+  margin-bottom: 10px;
+}
+
+.right_title span {
+  font-weight: 500;
+  padding-left: 7px;
+}
+
+.right_title .title_bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.right_title .title_bottom span {
+  margin-bottom: 10px;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro .inner {
+  width: 1318px;
+  margin: 0 368px 0 366px;
+  padding: 200px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro .inner .left {
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro .inner .left .img {
+  width: 100%;
+}
+
+.intro .inner .left .img figure {
+  width: 100%;
+  height: 294px;
+}
+
+.intro .inner .left .img figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro .inner .left .resume {
+  width: 100%;
+  text-align: center;
+  background-color: #d9d9d9;
+  margin-top: 35px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.intro .inner .left .resume a {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+.intro .inner .center_title {
+  margin-bottom: 120px;
+}
+
+.intro .inner .center_title h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.intro .inner .intro_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro .inner .intro_list h4,
+.intro .inner .intro_list p {
+  font-size: 20px;
+}
+
+.intro .inner .intro_list h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.intro .inner .intro_list p {
+  font-weight: 200;
+}
+
+.intro .inner .intro_list .into_item01 .in p {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.intro .inner .intro_list .in p:first-child {
+  margin-right: 20px;
+}
+
+.intro .inner .intro_list .into_item01 .in .birth {
+  margin-right: 35px;
+}
+
+.intro .inner .intro_list .into_item01 .edu {
+  margin-top: 50px;
+}
+
+.intro .inner .intro_list .into_item01 .edu p {
+  margin-bottom: 10px;
+}
+
+.intro .inner .right {
+  width: 952px;
+}
+
+.intro .inner .right .intro_item02 {
+  width: 465px;
+}
+
+.intro .inner .right .intro_item02 .title h4,
+.intro .inner .right .intro_item02 .title span {
+  display: inline-block;
+}
+
+.intro .inner .right .intro_item02 .title span {
+  font-size: 15px;
+  color: #a61f1f;
+  margin-left: 70px;
+}
+
+.intro .inner .right .intro_item02 .in {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.intro .inner .right .intro_item02 .in div.on {
+  background-color: #406126;
+}
+
+.intro .inner .right .intro_item02 .in p {
+  width: 110px;
+}
+
+.intro .inner .right .intro_item02 .in div {
+  height: 20px;
+  width: 265px;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.intro .inner .right .intro_item02 .in .photo {
+  width: 270px;
+}
+
+.intro .inner .right .intro_item02 .in .ill {
+  width: 245px;
+}
+
+.intro .inner .right .intro_item02 .in .figma {
+  width: 265px;
+}
+
+.intro .inner .right .intro_item02 .in .html {
+  width: 263px;
+}
+
+.intro .inner .right .intro_item02 .in .css {
+  width: 250px;
+}
+
+.intro .inner .right .intro_item02 .in .jquery {
+  width: 240px;
+}
+
+.intro .inner .right .intro_item02 .in .chinese {
+  width: 260px;
+}
+
+.intro .inner .right .intro_item02 .text {
+  margin-top: 40px;
+  display: none;
+}
+
+.intro .inner .right .intro_item02 .text span {
+  font-weight: 400;
+}
+
+.intro .inner .right .intro_item02 .text.on {
+  display: block;
+}
+
+.project .inner {
+  width: 1196px;
+  margin: 170px auto;
+}
+
+.project .inner .title h1 {
+  font-size: 60px;
+  font-family: "Pretendard";
+  font-weight: bold;
+  margin-bottom: 150px;
+}
+
+.project .inner .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 170px;
+}
+
+.project .inner .item .right {
+  width: 700px;
+}
+
+.project .inner .item .right .img {
+  width: 700px;
+}
+
+.project .inner .item .right .img figure {
+  width: 700px;
+}
+
+.project .inner .item .right .img figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .inner .item .left .num h3 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.project .inner .item .left > span {
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 15px;
+}
+
+.project .inner .item .left .program {
+  margin-top: 45px;
+  border-left: 1px solid #d9d9d9;
+  padding-left: 25px;
+  display: flex;
+  font-size: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.project .inner .item .left .program .pro_left {
+  width: 120px;
+}
+
+.project .inner .item .left .program .pro_left p {
+  margin-bottom: 15px;
+}
+
+.project .inner .item .left .program .pro_left p:last-child {
+  margin: 0;
+}
+
+.project .inner .item .left .program .pro_right span:last-child {
+  margin: 0;
+}
+
+.project .inner .item .left .program .pro_right {
+  display: flex;
+  flex-direction: column;
+  font-family: "Pretendard";
+}
+
+.project .inner .item .left .program .pro_right span {
+  margin-bottom: 15px;
+  font-weight: 200;
+}
+
+.project .inner .item .right .btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.project .inner .item .right .btn a {
+  height: 36px;
+  background-color: white;
+  margin-right: 16px;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 1px 1px 10px 1px rgba(84, 84, 84, 0.392);
+  font-weight: 400;
+}
+
+.project .inner .item .right .btn a.on {
+  background-color: #406126;
+  color: white;
+}
+
+.other {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.other .title h1 {
+  font-size: 60px;
+  font-family: "Pretendard";
+  font-weight: bold;
+  margin-left: 368px;
+  margin-bottom: 65px;
+}
+
+.other .item_list {
+  height: 590px;
+  margin: 0 150px;
+}
+
+.other .item {
+  width: 550px;
+  /* display: flex; */
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.other .item_sec .img figure img {
+  height: 92%;
+}
+
+.other .item .img {
+  height: 305px;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+}
+
+.other .item .img figure {
+  height: 305px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.other .item .img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.other .item .text_list {
+  width: 75%;
+  border-left: 1px solid #d9d9d9;
+  padding: 25px;
+  margin-top: 35px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.other .item .text_list .right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+}
+
+.other .item h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.other .item .text p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.other .item .text p:last-child {
+  margin: 0;
+}
+
+.other .item .text span {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.other .item .text span:last-child {
+  margin: 0;
+}
+
+.other .item .btn01 {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.other .item:nth-child(3) .btn01 {
+  margin-left: 60px;
+  justify-content: flex-start;
+}
+
+.other .item .btn01 div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.other .item .btn01 div p {
+  margin-bottom: 7px;
+}
+
+.other .item .btn01 p {
+  width: 45%;
+  height: 36px;
+  background-color: white;
+  line-height: 36px;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
+
+.other .item .btn01 p a {
+  display: block;
+}
+
+.other .item:nth-child(5) .btn01 > p {
+  width: 95%;
+}
+
+.swiper-button-prev {
+  position: static;
+  position: absolute;
+  top: 0;
+  left: auto;
+  transform: translate(-30%, 50%);
+  right: 300px;
+}
+
+.swiper-button-next {
+  position: static;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 200px;
+  transform: translate(-50%, 50%);
+}
+
+:root {
+  --swiper-theme-color: #333;
+}
+
+.adver .inner {
+  width: 1645px;
+  margin: 0 auto 170px;
+}
+
+.adver .inner .title {
+  text-align: center;
+}
+
+.adver .inner .title h1 {
+  font-size: 40px;
+  font-family: "Pretendard";
+  font-weight: 600;
+}
+
+.adver .inner .title p {
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.adver .inner .item_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.adver .inner .item {
+  width: 400px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.adver .inner .item:last-child {
+  width: 1230px;
+}
+
+.adver .inner .item:last-child figure {
+  width: 1230px;
+}
+
+.adver .inner .item:last-child figure img {
+  height: 100%;
+}
+
+.adver .inner .item figure {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.adver .inner .item figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.adver .inner .item.on .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.877);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adver .inner .item .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.785);
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adver .inner .item .text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.adver .inner .item .text span {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+.content.on{
+    display: flex;
+}
+.content {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #00000062;
+  z-index: 9;
+  display: none;
+}
+
+.content .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .inner .item {
+    width: 700px;
+    height: 800px;
+    overflow-y: auto;
+  display: none;
+}
+
+.content .inner .item.on {
+  display: block;
+}
+.content .inner .item figure{
+    width: 100%;
+}
+.content .inner .item img{
+    object-fit: cover;
+    width: 100%;
+}
+.content .inner > .item:nth-child(1){
+    height: auto;
+}
+.content .inner > .item:nth-child(6){
+   width: 80%;
+   height: auto;
+}
+
+.edit {
+  margin-bottom: 170px;
+}
+
+.edit .inner {
+  width: 1700px;
+  margin: 0 auto;
+}
+
+.edit .inner .title {
+  text-align: center;
+}
+
+.edit .inner .title h1 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Pretendard";
+}
+
+.edit .inner .title p {
+  font-weight: 300;
+  font-size: 19px;
+}
+
+.edit .inner .item_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.edit .inner .item {
+  width: 410px;
+  height: 450px;
+}
+
+.edit .inner .item figure {
+  width: 100%;
+  height: 450px;
+}
+
+.edit .inner .item figure img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.edit .inner .item .text {
+  margin-top: 10px;
+}
+
+.edit .inner .item .text h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.edit .inner .item .text p {
+  font-weight: 200;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.edit .inner .item .text p span {
+  font-weight: 300;
+  padding-right: 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: #d9d9d9;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+footer p span {
+  font-weight: 500;
+}
+
+#fp-nav {
+  top: 90%;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #333;
+}
