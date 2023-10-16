@@ -12,26 +12,49 @@
     />
     <link rel="stylesheet" href="css/sujin_portfolio.css" />
 
-    <link rel="shortcut icon" href="img/파비콘/android-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-
+    <link rel="shortcut icon" href="img/파비콘/android-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <script src="lib/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -100,6 +123,14 @@
             },
           },
         });
+
+        $(".swiper-slide").mouseenter(function(){
+          swiper.autoplay.stop();
+        });
+        $(".swiper-slide").mouseleave(function(){
+          swiper.autoplay.start();
+        });
+
         $(".adver .inner .item").mouseenter(function () {
           $(".adver .inner .item").removeClass("on");
           $(this).addClass("on");
@@ -133,20 +164,18 @@
 
         $(window).scroll(function () {
           let height = $(window).scrollTop();
-          let item1Top = $(".project .inner .item1").offset().top;
-          let item2Top = $(".project .inner .item2").offset().top;
+          let item1Top = $(
+            ".fp-scroll-mac .fp-viewing-sec3 .project .inner .item1"
+          ).offset().top;
+          let item2Top = $(
+            ".fp-scroll-mac .fp-viewing-sec3 .project .inner .item2"
+          ).offset().top;
           console.log(height);
           console.log(item1Top);
           console.log(item2Top);
-
-
-
-
         });
       });
     </script>
-
-
   </head>
 
   <body>
@@ -422,6 +451,34 @@
                   </figure>
                 </div>
                 <!-- item end -->
+
+                <div class="item">
+                  <figure>
+                    <img src="img/이케아.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+               
+                <div class="item">
+                  <figure>
+                    <img src="img/oatside.JPG" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+
+                <div class="item">
+                  <figure>
+                    <img src="img/ein1.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+                <div class="item">
+                  <figure>
+                    <img src="img/spring.jpg" alt="디자인작품" />
+                  </figure>
+                </div>
+                <!-- item end -->
+
               </div>
               <!-- poster end -->
             </div>
@@ -449,12 +506,14 @@
                     <div class="pro_left">
                       <p>기여도</p>
                       <p>프로그램</p>
+                      <p>언어</p>
                       <p>제작기간</p>
                     </div>
                     <!-- left end -->
                     <div class="pro_right">
-                      <span>100% (개인작업)</span>
-                      <span>html, css, jquery, Ps</span>
+                      <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                      <span>Ps, Vscode</span>
+                      <span>html, css, jquery</span>
                       <span>2주</span>
                     </div>
                     <!-- right end -->
@@ -503,12 +562,14 @@
                     <div class="pro_left">
                       <p>기여도</p>
                       <p>프로그램</p>
+                      <p>언어</p>
                       <p>제작기간</p>
                     </div>
                     <!-- left end -->
                     <div class="pro_right">
-                      <span>100% (개인작업)</span>
-                      <span>html, css, jquery, Ps</span>
+                      <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                      <span>Ps, Vscode</span>
+                      <span>html, css, jquery</span>
                       <span>1주</span>
                     </div>
                     <!-- right end -->
@@ -553,12 +614,14 @@
                     <div class="pro_left">
                       <p>기여도</p>
                       <p>프로그램</p>
+                      <p>언어</p>
                       <p>제작기간</p>
                     </div>
                     <!-- left end -->
                     <div class="pro_right">
-                      <span>100% (개인작업)</span>
-                      <span>html, css, jquery, Ps</span>
+                      <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                      <span>Ps, Vscode</span>
+                      <span>html, css, jquery</span>
                       <span>1주</span>
                     </div>
                     <!-- right end -->
@@ -604,11 +667,13 @@
                     <div class="pro_left">
                       <p>기여도</p>
                       <p>프로그램</p>
+                      <p>언어</p>
                       <p>제작기간</p>
                     </div>
                     <!-- left end -->
                     <div class="pro_right">
-                      <span>100% (개인작업)</span>
+                      <span>퍼블리싱 100% (개인작업)</span>
+                      <span>Vscode</span>
                       <span>html, css, jquery</span>
                       <span>5일</span>
                     </div>
@@ -652,11 +717,13 @@
                     <div class="pro_left">
                       <p>기여도</p>
                       <p>프로그램</p>
+                      <p>언어</p>
                       <p>제작기간</p>
                     </div>
                     <!-- left end -->
                     <div class="pro_right">
-                      <span>100% (개인작업)</span>
+                      <span>퍼블리싱 100% (개인작업)</span>
+                      <span>Vscode</span>
                       <span>html, css, jquery</span>
                       <span>5일</span>
                     </div>
@@ -712,11 +779,13 @@
                       <div class="left">
                         <p>기여도</p>
                         <p>프로그램</p>
+                        <p>언어</p>
                         <p>제작기간</p>
                       </div>
                       <!-- left end -->
                       <div class="right">
-                        <span>100% (개인작업)</span>
+                        <span>퍼블리싱 100% (개인작업)</span>
+                        <span>Vscode</span>
                         <span>React</span>
                         <span>2일</span>
                       </div>
@@ -755,12 +824,14 @@
                       <div class="left">
                         <p>기여도</p>
                         <p>프로그램</p>
+                        <p>언어</p>
                         <p>제작기간</p>
                       </div>
                       <!-- left end -->
                       <div class="right">
-                        <span>100% (개인작업)</span>
-                        <span>html, css, jquery, Figma</span>
+                        <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                        <span>Vscode, Figma</span>
+                        <span>html, css, jquery</span>
                         <span>1주</span>
                       </div>
                       <!-- right end -->
@@ -801,11 +872,13 @@
                       <div class="left">
                         <p>기여도</p>
                         <p>프로그램</p>
+                        <p>언어</p>
                         <p>제작기간</p>
                       </div>
                       <!-- left end -->
                       <div class="right">
-                        <span>100% (개인작업)</span>
+                        <span>퍼블리싱 100% (개인작업)</span>
+                        <span>Vscode</span>
                         <span>html, css, jquery</span>
                         <span>1주</span>
                       </div>
@@ -826,7 +899,7 @@
                   </div>
                   <!-- btn01 end -->
                 </div>
-                <!-- item emd -->
+                <!-- item end -->
 
                 <div class="swiper-slide item">
                   <div class="img">
@@ -841,12 +914,14 @@
                       <div class="left">
                         <p>기여도</p>
                         <p>프로그램</p>
+                        <p>언어</p>
                         <p>제작기간</p>
                       </div>
                       <!-- left end -->
                       <div class="right">
-                        <span>100% (개인작업)</span>
-                        <span>html, css, jquery, Ps</span>
+                        <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                        <span>Vscode, Ps</span>
+                        <span>html, css, jquery</span>
                         <span>1주</span>
                       </div>
                       <!-- right end -->
@@ -886,12 +961,14 @@
                       <div class="left">
                         <p>기여도</p>
                         <p>프로그램</p>
+                        <p>언어</p>
                         <p>제작기간</p>
                       </div>
                       <!-- left end -->
                       <div class="right">
-                        <span>100% (개인작업)</span>
-                        <span>html, css, jquery, Figma</span>
+                        <span>디자인, 퍼블리싱 100% (개인작업)</span>
+                        <span>Vscode, Figma</span>
+                        <span>html, css, jquery</span>
                         <span>10일</span>
                       </div>
                       <!-- right end -->
@@ -1044,65 +1121,178 @@
                   </figure>
                   <div class="text">
                     <h4>STAY AT HOME</h4>
-                    <p><span>MEDIA</span>POSTER</p>
-                    <p><span>DATA</span> 2023/ 09</p>
-                    <p><span>PROGRAM</span>Ps</p>
-                  </div>
-                  <!-- text end -->
-                </div>
-                <!-- item end -->
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div> <!-- item end -->
                 <div class="item">
                   <figure>
                     <img src="img/poster_cooking2.jpg" alt="디자인작품" />
                   </figure>
                   <div class="text">
                     <h4>시니어 쿠킹클래스</h4>
-                    <p><span>MEDIA</span>POSTER</p>
-                    <p><span>DATA</span> 2023/ 09</p>
-                    <p><span>PROGRAM</span>Ps, Ai</p>
-                  </div>
-                  <!-- text end -->
-                </div>
-                <!-- item end -->
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps, Ai</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div> <!-- item end -->
                 <div class="item">
                   <figure>
                     <img src="img/poster_향수2.jpg" alt="디자인작품" />
                   </figure>
                   <div class="text">
                     <h4>CONTENT DECODED</h4>
-                    <p><span>MEDIA</span>POSTER</p>
-                    <p><span>DATA</span> 2023/ 09</p>
-                    <p><span>PROGRAM</span>Ps</p>
-                  </div>
-                  <!-- text end -->
-                </div>
-                <!-- item end -->
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div> <!-- item end -->
                 <div class="item">
                   <figure>
                     <img src="img/bookcover2.jpg" alt="디자인작품" />
                   </figure>
                   <div class="text">
                     <h4>시로 만든 집 14채</h4>
-                    <p><span>MEDIA</span>BOOKCOVER</p>
-                    <p><span>DATA</span> 2023/ 09</p>
-                    <p><span>PROGRAM</span>Ps, Ai</p>
-                  </div>
-                  <!-- text end -->
-                </div>
-                <!-- item end -->
-              </div>
-              <!-- item_list end -->
-            </div>
-            <!-- inner end -->
-          </div>
-          <!-- edit end -->
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>BOOK COVER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps, Ai</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div><!-- item end -->
 
-          <a href="#project01" class="top">
-            <p>Top</p> </a
+                <div class="item">
+                  <figure>
+                    <img src="img/ikea.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>IKEA chair</h4>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div><!-- item end -->
+
+
+                <div class="item">
+                  <figure>
+                    <img src="img/oat.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>OAT DRINK</h4>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 06</span>
+                        <span>Ps</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                  <figure>
+                    <img src="img/ein.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>EIN TEIG doughnut</h4>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ps</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                  <figure>
+                    <img src="img/spring1.jpg" alt="디자인작품" />
+                  </figure>
+                  <div class="text">
+                    <h4>spring sale</h4>
+                    <div class="text_list">
+                      <div class="left">
+                        <p>MEDIA</p>
+                        <p>DATA</p>
+                        <p>PROGRAM</p>
+                      </div> <!-- right end -->
+                      <div class="right">
+                        <span>POSTER</span>
+                        <span>2023/ 09</span>
+                        <span>Ai</span>
+                      </div><!-- left end -->
+                    </div><!-- text_list end -->
+                  </div><!-- text end -->
+                </div><!-- item end -->
+
+              </div><!-- item_list end -->
+            </div><!-- inner end -->
+          </div><!-- edit end -->
+
+          <a href="#project01" class="top"> <p>Top</p> </a
           ><!-- top end -->
 
           <footer>
             <p><span>미완성,</span>&nbsp; 이 곳에서 완성해 나가겠습니다.</p>
+            <div>
+            <P>본 사이트는 상업적 목적이 아닌 개인 포트폴리오로 제작되었습니다.</P>
+            <p>Copyrightⓒ 2023 Shinsujin.All rights reserved.</p></div>
           </footer>
         </div>
         <!-- sectiond end -->
