@@ -16,6 +16,7 @@ body {
   font-family: "Pretendard";
   font-size: 16px;
   background-color: #f9f9f9;
+  color: #333;
 }
 
 .top {
@@ -29,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- z-index: 9;
+  z-index: 9;
 }
 
 .top p {
@@ -323,7 +324,7 @@ body {
   border-left: 1px solid #d9d9d9;
   padding-left: 25px;
   display: flex;
-  font-size: 25px;
+  font-size: 22px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -363,15 +364,14 @@ body {
 }
 
 .project .inner .item .right .btn a {
-  height: 36px;
   background-color: white;
   margin-right: 16px;
-  font-size: 20px;
-  border-radius: 10px;
+  font-size: 18px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 12px 24px;
   box-shadow: 1px 1px 10px 1px rgba(84, 84, 84, 0.392);
   font-weight: 400;
 }
@@ -395,7 +395,7 @@ body {
 }
 
 .other .item_list {
-  height: 590px;
+  height: 620px;
   margin: 0 150px;
 }
 
@@ -432,7 +432,7 @@ body {
 .other .item .text_list {
   width: 75%;
   border-left: 1px solid #d9d9d9;
-  padding: 25px;
+  padding: 25px 0 25px 20px;
   margin-top: 35px;
   display: flex;
   margin: 0 auto;
@@ -452,7 +452,7 @@ body {
 }
 
 .other .item .text p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -462,7 +462,7 @@ body {
 }
 
 .other .item .text span {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 200;
   margin-bottom: 15px;
 }
@@ -506,6 +506,11 @@ body {
 
 .other .item .btn01 p a {
   display: block;
+}
+
+.other .item .btn01 p a:hover {
+  background-color: #949494;
+  color: white;
 }
 
 .other .item:nth-child(5) .btn01 > p {
@@ -630,8 +635,8 @@ body {
   margin-bottom: 5px;
   font-size: 17px;
 }
-.content.on{
-    display: flex;
+.content.on {
+  display: flex;
 }
 .content {
   width: 100%;
@@ -645,36 +650,36 @@ body {
 }
 
 .content .inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content .inner .item {
-    width: 700px;
-    height: 800px;
-    overflow-y: auto;
+  width: 700px;
+  height: 800px;
+  overflow-y: auto;
   display: none;
 }
 
 .content .inner .item.on {
   display: block;
 }
-.content .inner .item figure{
-    width: 100%;
+.content .inner .item figure {
+  width: 100%;
 }
-.content .inner .item img{
-    object-fit: cover;
-    width: 100%;
+.content .inner .item img {
+  object-fit: cover;
+  width: 100%;
 }
-.content .inner > .item:nth-child(1){
-    height: auto;
+.content .inner > .item:nth-child(1) {
+  height: auto;
 }
-.content .inner > .item:nth-child(6){
-   width: 80%;
-   height: auto;
+.content .inner > .item:nth-child(6) {
+  width: 80%;
+  height: auto;
 }
 
 .edit {
@@ -701,6 +706,10 @@ body {
   font-size: 19px;
 }
 
+.edit .inner .item_list .item:nth-child(n+5) {
+  margin-top: 130px;
+}
+
 .edit .inner .item_list {
   width: 100%;
   display: flex;
@@ -711,6 +720,7 @@ body {
 .edit .inner .item {
   width: 410px;
   height: 450px;
+  cursor: pointer;
 }
 
 .edit .inner .item figure {
@@ -745,20 +755,43 @@ body {
   padding-right: 20px;
 }
 
+.edit .inner .item .text_list {
+  display: flex;
+}
+
+.edit .inner .item .text_list .right {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+}
+
+.edit .inner .item .text_list .left p {
+  font-weight: 400;
+}
+
+.edit .inner .item .text_list .right {
+  padding-left: 35px;
+}
+.edit .inner .item .text_list .right span {
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
 footer {
   width: 100%;
   background-color: #d9d9d9;
   text-align: center;
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
 }
 
-footer p {
-  font-size: 16px;
+footer > p {
+  font-size: 18px;
   font-weight: 300;
+  height: 50px;
+  line-height: 40px;
 }
 
-footer p span {
+footer > p span {
   font-weight: 500;
 }
 
@@ -768,4 +801,10 @@ footer p span {
 
 #fp-nav ul li .fp-tooltip {
   color: #333;
+}
+
+footer div p{
+margin-bottom: 5px;
+font-size: 15px;
+font-weight: 300;
 }
