@@ -574,20 +574,22 @@ body {
   cursor: pointer;
 }
 
-.adver .inner .item:last-child {
+.adver .inner .banner {
   width: 1230px;
 }
 
-.adver .inner .item:last-child figure {
-  width: 1230px;
+.adver .inner .banner figure {
+  width: 100%
+  
 }
 
-.adver .inner .item:last-child figure img {
+.adver .inner .banner figure img {
   height: 100%;
+  width: 100%;
 }
 
 .adver .inner .item figure {
-  width: 400px;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   border-radius: 20px;
@@ -635,6 +637,10 @@ body {
   margin-bottom: 5px;
   font-size: 17px;
 }
+
+.adver .inner .item{
+  
+}
 .content.on {
   display: flex;
 }
@@ -678,6 +684,10 @@ body {
   height: auto;
 }
 .content .inner > .item:nth-child(6) {
+  width: 80%;
+  height: auto;
+}
+.content .inner > .item:nth-child(7) {
   width: 80%;
   height: auto;
 }
